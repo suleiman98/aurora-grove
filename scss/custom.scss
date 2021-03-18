@@ -26,3 +26,28 @@ body {
         }
     }
 }
+
+#showcase {
+    background-image: url("../images/h-img.jpg");
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 650px;
+
+    h1 {
+        font-family: 'Questrial', sans-serif;
+        line-height: 1;
+    }
+    #book {
+        font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+        & {
+            min-height: 500px;
+            h1 {
+                font-size: 4rem;
+            }
+        }
+    }
+}
