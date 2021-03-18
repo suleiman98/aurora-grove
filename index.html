@@ -28,7 +28,7 @@
                 <li class="nav-item"><a href="#" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Explore</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Book</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#bookingModal">Book</a></li>
             </ul>
         </div>
     </nav>
@@ -39,7 +39,7 @@
             <h3 class="display-5 mb-0">MODERN CAMPING</h3>
             <h1 class="display-1">AURORA GROVE</h1>
             <p class="lead d-none d-md-block">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, ratione.</p>
-            <button id="book" class="btn btn-primary btn-lg rounded-pill text-white px-5">BOOK NOW</button>
+            <button id="book" class="btn btn-primary btn-lg rounded-pill text-white px-5" data-bs-toggle="modal" data-bs-target="#bookingModal">BOOK NOW</button>
         </div>
     </section>
 
@@ -231,9 +231,56 @@
             <li class="nav-item"><a href="#" class="nav-link text-white">EXPERIENCE</a></li>
             <li class="nav-item"><a href="#" class="nav-link text-white">EXPLORE</a></li>
             <li class="nav-item"><a href="#" class="nav-link text-white">CONTACT</a></li>
-            <li class="nav-item"><a href="#" class="nav-link text-white">BOOK NOW</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#bookingModal">BOOK NOW</a></li>
         </ul>
     </section>
+
+    <div id="bookingModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">New booking</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                    <span class="sr-only" aria-hidden="true">Close</span>
+                </div>
+                <div class="modal-body">
+                    <p>Please fill out the form below and we'll get back to you as soon as possible</p>
+                    <form>
+                        <div class="form-group mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="name@example.com">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="numOfAdults" class="form-label">Number of adults</label>
+                            <select name="select" id="numOfAdults" class="form-control">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="numOfChildren" class="form-label">Number of children</label>
+                            <select name="select" id="numOfChildren" class="form-control">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="requests" class="form-label">Additional Requests</label>
+                            <textarea name="textarea" id="requests" rows="3" class="form-control"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Submit request</button>
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
